@@ -251,7 +251,7 @@ body {
     color: white !important;
     padding: 0.75rem 1.5rem !important;
     border-radius: 50px !important;
-    box-shadow: 0 4px 15px rgba(33, 147, 176, 0.3);
+    box-shadow: var(--card-shadow);
     position: relative;
     overflow: hidden;
 }
@@ -2752,4 +2752,129 @@ textarea.form-control {
 
 .modal .btn-danger {
     background: linear-gradient(45deg, #dc3545, #ff4444);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 80px 0 40px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+    }
+
+    /* Courses Section */
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .course-card {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+
+    .info-item {
+        padding: 15px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-brand, .footer-links, .footer-contact {
+        width: 100%;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    /* Login Modal */
+    .modal-dialog {
+        margin: 1rem;
+    }
+
+    .avatar-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-login {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar-nav {
+        gap: 10px;
+    }
+
+    .nav-item.ms-3 {
+        margin-left: 0 !important;
+    }
 }
